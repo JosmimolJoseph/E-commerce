@@ -14,23 +14,21 @@ namespace E_commerce
         connection_cls ob = new connection_cls();
         protected void Page_Load(object sender, EventArgs e)
         {
+
             grid_bind();
         }
         public void grid_bind()
         {
-            string s = "select * from Cart_Product where Us_Id='" + Session["userid"] + "'";
+            string s = "select t1.*,t2.* from Cart_Product t1 join Product t2 on t1.Product_Id = t2.Product_Id where Us_Id='" + Session["userid"] + "'";
             DataSet ds = ob.fn_adapter(s);
             GridView1.DataSource = ds;
             GridView1.DataBind();
         }
-
-
         protected void LinkButton1_Command(object sender, CommandEventArgs e)
         {
             Session["cart_id"] = Convert.ToInt32(e.CommandArgument);
             
         }
-
         protected void LinkButton2_Command(object sender, CommandEventArgs e)
         {
             int i = Convert.ToInt32(e.CommandArgument);
@@ -38,12 +36,22 @@ namespace E_commerce
             int g = ob.fn_nonquery(d);
             grid_bind();
         }
-
-        //protected void Button1_Click(object sender, EventArgs e)
-        //{
-        //    string t="select Product_Price from Product where"
-        //    string m = "update Cart_Product set Cart_Quantity='" + TextBox1.Text + "'";
-        //    int i = ob.fn_nonquery(m);
-        //}
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Panel1.Visible = true;
+            string t = "select t2.Product_Price from Product t2 join Cart_Product t1 on t1.Product_Id = t2.Product_Id where t1.Cart_Id='"+Session["cart_id"]+"'";
+            string f = ob.fn_exescalar(t);
+            int q = Convert.ToInt32(TextBox1.Text);
+            int p = Convert.ToInt32(f);
+            int t_price = q * p;
+            string m = "update Cart_Product set Cart_Quantity='" + TextBox1.Text + "',Cart_Total='"+t_price+"'where Cart_Id='"+Session["cart_id"]+"' ";
+            int i = ob.fn_nonquery(m);
+            if (i == 1)
+            {
+                grid_bind();
+                Label2.Visible = true;
+                Label2.Text = "success";
+            }   
+        }
     }
 }

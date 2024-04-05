@@ -23,7 +23,6 @@ namespace E_commerce
             GridView1.DataSource = ds;
             GridView1.DataBind();
         }
-
         protected void LinkButton1_Command(object sender, CommandEventArgs e)
         {
             Panel1.Visible = true;
@@ -34,9 +33,7 @@ namespace E_commerce
             {
                 TextBox1.Text = dr["Category_Description"].ToString();
             }
-
         }
-
         protected void Button1_Click(object sender, EventArgs e)
         {
             string w = "~/Photos/" + FileUpload1.FileName;
@@ -50,9 +47,7 @@ namespace E_commerce
                 Label3.Text = "Updated";
                 grid_bind();
             }
-
         }
-
         protected void LinkButton2_Command(object sender, CommandEventArgs e)
         {
             int id = Convert.ToInt32(e.CommandArgument);
@@ -70,9 +65,6 @@ namespace E_commerce
                 int h = ob.fn_nonquery(m);
                 grid_bind();
             }
-
-        }
-
-
+        }     
     }
 }

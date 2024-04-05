@@ -16,7 +16,6 @@ namespace E_commerce
         {
 
         }
-
         protected void Button1_Click(object sender, EventArgs e)
         {
             string str = "select count(Reg_Id) from Login where Username='" + TextBox1.Text + "' and Password='" + TextBox2.Text + "'";
@@ -43,7 +42,6 @@ namespace E_commerce
                     Label3.Text = "User";
 
                 }
-
             }
         }
     }

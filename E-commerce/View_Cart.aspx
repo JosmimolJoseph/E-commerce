@@ -37,7 +37,7 @@
         </tr>
         <tr>
             <td>
-                <asp:Panel ID="Panel1" runat="server">
+                <asp:Panel ID="Panel1" runat="server" Visible="False">
                     <table class="w-100">
                         <tr>
                             <td class="auto-style1">
@@ -50,7 +50,7 @@
                         <tr>
                             <td class="auto-style1">&nbsp;</td>
                             <td>
-                                <asp:Button ID="Button1" runat="server" Text="Edit" />
+                                <asp:Button ID="Button1" runat="server" Text="Edit" OnClick="Button1_Click" style="height: 26px" />
                             </td>
                         </tr>
                         <tr>
