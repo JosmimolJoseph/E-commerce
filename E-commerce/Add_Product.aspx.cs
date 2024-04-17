@@ -17,7 +17,7 @@ namespace E_commerce
             if (!IsPostBack)
             {
 
-
+                
                 string u = "select * from Category";
                 DataSet ds = ob.fn_adapter(u);
                 DropDownList1.DataSource = ds;

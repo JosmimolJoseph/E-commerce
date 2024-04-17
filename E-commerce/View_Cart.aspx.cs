@@ -12,6 +12,14 @@ namespace E_commerce
     public partial class Addto_Cart : System.Web.UI.Page
     {
         connection_cls ob = new connection_cls();
+
+        int Cid;
+        int cquantity;
+        int ctotal;
+        string cstatus;
+        int usid;
+        int productid;
+        int gtotal=0;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -26,6 +34,7 @@ namespace E_commerce
         }
         protected void LinkButton1_Command(object sender, CommandEventArgs e)
         {
+            Panel1.Visible = true;
             Session["cart_id"] = Convert.ToInt32(e.CommandArgument);
             
         }
@@ -52,6 +61,49 @@ namespace E_commerce
                 Label2.Visible = true;
                 Label2.Text = "success";
             }   
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            string max = "select max(Cart_Id) from Cart_Product";
+            string j = ob.fn_exescalar(max);
+            int u = Convert.ToInt32(j);
+            for (int i = 1; i <= u; i++)
+            {
+                string h= "select Us_Id from Cart_Product where Cart_Id=" + i + "";
+                string st = ob.fn_exescalar(h);
+                int ju = Convert.ToInt32(st);
+                int id = Convert.ToInt32(Session["userid"]);
+                if (id == ju)
+                {
+                    string ca = "select * from Cart_Product where Cart_Id=" + i + "";
+                    SqlDataReader dr = ob.fn_reader(ca);
+
+                    while (dr.Read())
+                    {
+                        Cid = Convert.ToInt32(dr["Cart_Id"].ToString());
+                        cquantity = Convert.ToInt32(dr["Cart_Quantity"].ToString());
+                        ctotal = Convert.ToInt32(dr["Cart_Total"].ToString());
+                        cstatus = dr["Cart_Status"].ToString();
+                        usid = Convert.ToInt32(dr["Us_Id"].ToString());
+                        productid = Convert.ToInt32(dr["Product_Id"].ToString());
+
+                    }
+                    gtotal = gtotal + ctotal;
+                    string ins = "insert into Order_Table values('Not Payed'," + Cid + "," + cquantity + "," + ctotal + ",'" + cstatus + "'," + usid + "," + productid + ")";
+                    int y = ob.fn_nonquery(ins);
+                }
+
+            }
+                string bill = "insert into Bill_Table values('" + DateTime.Now.ToString("yyyy-MM-dd") + "','Nill'," + usid + ","+gtotal+")";
+                int g = ob.fn_nonquery(bill);
+            //if (g != 0)
+            //{
+            //    string del = "delete from Cart_Product where Us_Id='" + Session["userid"] +"'";
+            //    int gh = ob.fn_nonquery(del);
+
+            //}
+            Response.Redirect("View Bill.aspx");
         }
     }
 }

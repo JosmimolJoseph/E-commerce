@@ -30,14 +30,12 @@
     <table class="w-100">
         <tr>
             <td class="auto-style1">
-                <asp:ScriptManager ID="ScriptManager1" runat="server">
-                </asp:ScriptManager>
-            </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style1">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Height="150px" Width="564px">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Height="150px" Width="1250px">
                     <Columns>
                         <asp:BoundField DataField="Category_Id" HeaderText="Id" />
                         <asp:BoundField DataField="Category_Name" HeaderText="Category Name" />

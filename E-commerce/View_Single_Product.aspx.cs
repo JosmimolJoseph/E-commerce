@@ -20,7 +20,7 @@ namespace E_commerce
             {
                 Label1.Text = dr["Product_Name"].ToString();
                 Label2.Text = dr["Product_Details"].ToString();
-                Label3.Text = dr["Product_Price"].ToString();
+                Label5.Text = dr["Product_Price"].ToString();
                 Image1.ImageUrl = dr["Product_Photo"].ToString();
             }
         }

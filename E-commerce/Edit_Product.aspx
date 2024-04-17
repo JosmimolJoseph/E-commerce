@@ -28,7 +28,7 @@
         </tr>
         <tr>
             <td>
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="1220px">
                     <Columns>
                         <asp:BoundField DataField="Product_Id" HeaderText="Id" />
                         <asp:BoundField DataField="Product_Name" HeaderText="Name" />

@@ -10,7 +10,7 @@
     <table class="w-100">
         <tr>
             <td>
-                <asp:DataList ID="DataList1" runat="server" RepeatColumns="3">
+                <asp:DataList ID="DataList1" runat="server" RepeatColumns="3" Height="640px" Width="1351px">
                     <ItemTemplate>
                         <table class="w-100">
                             <tr>

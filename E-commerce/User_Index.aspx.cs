@@ -14,15 +14,16 @@ namespace E_commerce
         connection_cls ob = new connection_cls();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (IsPostBack)
             {
-
-
-                string s = "select * from Category";
-                DataSet ds = ob.fn_adapter(s);
-                DataList1.DataSource = ds;
-                DataList1.DataBind();
+                return;
             }
+
+
+            string s = "select * from Category";
+            DataSet ds = ob.fn_adapter(s);
+            DataList1.DataSource = ds;
+            DataList1.DataBind();
         }
 
         protected void ImageButton1_Command(object sender, CommandEventArgs e)
@@ -30,5 +31,7 @@ namespace E_commerce
             Session["Category_id"] = Convert.ToInt32(e.CommandArgument);
             Response.Redirect("View_Product.aspx");
         }
+
+        
     }
 }

@@ -17,7 +17,7 @@
     <table class="w-100">
         <tr>
             <td class="auto-style2">
-                <asp:Image ID="Image1" runat="server" Height="462px" Width="361px" />
+                <asp:Image ID="Image1" runat="server" Height="532px" Width="505px" />
             </td>
             <td class="auto-style3">
                 <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
@@ -26,7 +26,7 @@
                 <br />
                 <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                 <br />
-                <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
                 <br />
             </td>
         </tr>

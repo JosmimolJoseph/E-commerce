@@ -10,7 +10,11 @@
     <table class="w-100">
         <tr>
             <td>
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="1255px">
                     <Columns>
                         <asp:ImageField DataImageUrlField="Product_Photo" HeaderText="Product Image">
                             <ControlStyle Height="55px" Width="55px" />
@@ -37,8 +41,37 @@
         </tr>
         <tr>
             <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Conform" />
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td>
                 <asp:Panel ID="Panel1" runat="server" Visible="False">
                     <table class="w-100">
+                        <tr>
+                            <td class="auto-style1">
+                                &nbsp;</td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
                         <tr>
                             <td class="auto-style1">
                                 <asp:Label ID="Label1" runat="server" Text="Quantity"></asp:Label>
@@ -71,8 +104,12 @@
         <tr>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
         <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
