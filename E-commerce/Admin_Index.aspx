@@ -57,7 +57,9 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style1">&nbsp;</td>
+            <td class="auto-style1">
+                <asp:LinkButton ID="LinkButton5" runat="server" PostBackUrl="~/View_Feedbackk.aspx">View Feedback</asp:LinkButton>
+            </td>
             <td class="auto-style5">&nbsp;</td>
             <td class="auto-style7">&nbsp;</td>
             <td>&nbsp;</td>

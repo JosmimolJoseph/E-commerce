@@ -73,6 +73,7 @@
     <Content Include="Connected Services\Check_Balance\E_commerce.Check_Balance.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="View_Feedbackk.aspx" />
     <None Include="Connected Services\Check_Balance\Service.disco" />
     <None Include="Connected Services\Check_Balance\configuration91.svcinfo" />
     <None Include="Connected Services\Check_Balance\configuration.svcinfo" />
@@ -90,6 +91,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Feedback.aspx" />
     <Content Include="View Bill.aspx" />
     <Content Include="View_Cart.aspx" />
     <Content Include="Add_Category.aspx" />
@@ -179,6 +181,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Feedback.aspx.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Feedback.aspx.designer.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
     </Compile>
     <Compile Include="View Bill.aspx.cs">
       <DependentUpon>View Bill.aspx</DependentUpon>
@@ -279,6 +288,13 @@
     </Compile>
     <Compile Include="View_Single_Product.aspx.designer.cs">
       <DependentUpon>View_Single_Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View_Feedbackk.aspx.cs">
+      <DependentUpon>View_Feedbackk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View_Feedbackk.aspx.designer.cs">
+      <DependentUpon>View_Feedbackk.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

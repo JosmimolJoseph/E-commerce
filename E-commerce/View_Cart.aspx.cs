@@ -97,12 +97,12 @@ namespace E_commerce
             }
                 string bill = "insert into Bill_Table values('" + DateTime.Now.ToString("yyyy-MM-dd") + "','Nill'," + usid + ","+gtotal+")";
                 int g = ob.fn_nonquery(bill);
-            //if (g != 0)
-            //{
-            //    string del = "delete from Cart_Product where Us_Id='" + Session["userid"] +"'";
-            //    int gh = ob.fn_nonquery(del);
+            if (g != 0)
+            {
+                string del = "delete from Cart_Product where Us_Id='" + Session["userid"] + "'";
+                int gh = ob.fn_nonquery(del);
 
-            //}
+            }
             Response.Redirect("View Bill.aspx");
         }
     }

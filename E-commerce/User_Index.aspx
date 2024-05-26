@@ -16,12 +16,24 @@
         </tr>
         <tr>
             <td>
+                <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/View_Cart.aspx">View Cart</asp:LinkButton>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>
+                <asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/Feedback.aspx">Feedback</asp:LinkButton>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>
                 &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>
-                <asp:DataList ID="DataList1" runat="server" RepeatColumns="14">
+                <asp:DataList ID="DataList1" runat="server" RepeatColumns="14" Height="333px" Width="1150px">
                     <ItemTemplate>
                         <table class="w-100">
                             <tr>
@@ -83,8 +95,7 @@
         </tr>
         <tr>
             <td>
-                <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/View_Cart.aspx">View Cart</asp:LinkButton>
-            </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>

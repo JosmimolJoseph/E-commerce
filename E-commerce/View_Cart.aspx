@@ -45,7 +45,16 @@
             <td>
                 &nbsp;</td>
             <td>
-                <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Conform" />
+                &nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+            <td>
+                <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Confirm" />
             </td>
             <td>&nbsp;</td>
         </tr>

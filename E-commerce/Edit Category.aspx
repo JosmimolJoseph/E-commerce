@@ -32,10 +32,14 @@
             <td class="auto-style1">
                 &nbsp;</td>
             <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style1">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Height="150px" Width="1250px">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Height="150px" Width="1070px">
                     <Columns>
                         <asp:BoundField DataField="Category_Id" HeaderText="Id" />
                         <asp:BoundField DataField="Category_Name" HeaderText="Category Name" />
@@ -57,6 +61,10 @@
                     </Columns>
                 </asp:GridView>
             </td>
+            <td>&nbsp;</td>
+            <td></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
@@ -115,21 +123,41 @@
                 </asp:Panel>
             </td>
             <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style1">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
             <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style1">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
     </table>
